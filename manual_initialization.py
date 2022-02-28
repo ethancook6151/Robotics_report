@@ -34,10 +34,14 @@ if __name__ == '__main__':
 	# set the ideal time to destination
 	pos_cmd_point.time_from_start = rospy.Duration(1.0) # here one second 
 	# just change the value of the command for the second joint
-	pos_cmd_point.positions[1] = -math.pi/2
+	pos_cmd_point.positions[0] = 1.63
 	# just change the value of the command for the elbow joint
-	pos_cmd_point.positions[0] = 0.0
+	pos_cmd_point.positions[1] = -1.26
 	# add the trajectory point to the command
+	pos_cmd_point.positions[2] = 0.0
+	pos_cmd_point.positions[3] = -1.8
+	pos_cmd_point.positions[4] = -1.38
+	pos_cmd_point.positions[5] = 0.0
 	pos_cmd.points.append(pos_cmd_point)
 	# define a message header	
 	header = Header()
@@ -51,3 +55,4 @@ if __name__ == '__main__':
 		pos_pub.publish(pos_cmd)
 		# wait for 0.1 seconds until the next loop and repeat
 		loop_rate.sleep()
+
