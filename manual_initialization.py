@@ -33,14 +33,17 @@ if __name__ == '__main__':
 		pos_cmd_point.positions.append(0.0)
 	# set the ideal time to destination
 	pos_cmd_point.time_from_start = rospy.Duration(1.0) # here one second 
-	# just change the value of the command for the second joint
-	pos_cmd_point.positions[0] = 1.63
 	# just change the value of the command for the elbow joint
+	pos_cmd_point.positions[0] = 1.63
+	# just change the value of the command for the shoulder lift joint
 	pos_cmd_point.positions[1] = -1.26
-	# add the trajectory point to the command
+	# just change the value of the command for the shoulder pan joint
 	pos_cmd_point.positions[2] = 0.0
+	# just change the value of the command for the wrist 1 joint
 	pos_cmd_point.positions[3] = -1.8
+	# just change the value of the command for the wrist 2 joint
 	pos_cmd_point.positions[4] = -1.38
+	# just change the value of the command for the wrist 3 joint 
 	pos_cmd_point.positions[5] = 0.0
 	pos_cmd.points.append(pos_cmd_point)
 	# define a message header	
