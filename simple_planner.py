@@ -18,8 +18,7 @@ if __name__ == '__main__':
 	# define a plan variable
 	plan = Plan()
 	plan_point1 = Twist()
-	# just a quick solution to send two target points
-	# define a point close to the initial position
+	# Robot starting position 
 	plan_point1.linear.x = -0.5
 	plan_point1.linear.y = -0.15
 	plan_point1.linear.z = 0.314
@@ -30,7 +29,7 @@ if __name__ == '__main__':
 	plan.points.append(plan_point1)
 	
 	plan_point2 = Twist()
-	# define a point away from the initial position
+	# Robot bends out and down
 	plan_point2.linear.x = -0.7
 	plan_point2.linear.y = -0.15
 	plan_point2.linear.z = 0.0
@@ -41,7 +40,7 @@ if __name__ == '__main__':
 	plan.points.append(plan_point2)
 	
 	plan_point3 = Twist()
-	# define a point away from the initial position
+	# Robot goes back to starting postiion
 	plan_point3.linear.x = -0.5
 	plan_point3.linear.y = -0.15
 	plan_point3.linear.z = 0.314
@@ -52,7 +51,7 @@ if __name__ == '__main__':
 	plan.points.append(plan_point3)
 
 	plan_point4 = Twist()
-	# define a point away from the initial position
+	# Robot turns left and bends out and down
 	plan_point4.linear.x = -0.7
 	plan_point4.linear.y = -0.5
 	plan_point4.linear.z = 0.0
@@ -63,8 +62,7 @@ if __name__ == '__main__':
 	plan.points.append(plan_point4)
 	
 	plan_point5 = Twist()
-	# just a quick solution to send two target points
-	# define a point close to the initial position
+	# Robot stays turned and bend back in and up 
 	plan_point5.linear.x = -0.5
 	plan_point5.linear.y = -0.5
 	plan_point5.linear.z = 0.314
@@ -75,8 +73,8 @@ if __name__ == '__main__':
 	plan.points.append(plan_point5)
 	
 	plan_point6 = Twist()
-	# just a quick solution to send two target points
-	# define a point close to the initial position
+	# Robot goes to the right of intial position
+	# Then reaches down and out
 	plan_point6.linear.x = -0.7
 	plan_point6.linear.y = 0.3
 	plan_point6.linear.z = 0.0
@@ -87,8 +85,7 @@ if __name__ == '__main__':
 	plan.points.append(plan_point6)
 	
 	plan_point7 = Twist()
-	# just a quick solution to send two target points
-	# define a point close to the initial position
+	# Robot stays turned and bends back in and up
 	plan_point7.linear.x = -0.5
 	plan_point7.linear.y = 0.3
 	plan_point7.linear.z = 0.314
