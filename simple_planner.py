@@ -54,7 +54,8 @@ if __name__ == '__main__':
 		# add a ros transform listener
 		tfBuffer = tf2_ros.Buffer()
 		listener = tf2_ros.TransformListener(tfBuffer)
-	
+			
+		# try getting the most update transformation between the camera frame and the base frame
 		try:
 			trans = tfBuffer.lookup_transform("base", "camera_color_optical_frame", rospy.Time())
 		except (tf2_ros.LookupException, tf2_ros.ConnectivityException, tf2_ros.ExtrapolationException):
